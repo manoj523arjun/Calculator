@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+</head>
+ <link rel="stylesheet" href="bootstrap.min.css">
+ <link rel="stylesheet" href="style.css">
+  <script src="jquery.min.js"></script>
+  <script src="draggable.min.js"></script>
+<script type="text/javascript"></script>
+<script>
+  $(function() {
+    $( "#draggable" ).draggable({
+     containment: "body",
+      scroll: false, 
+    });
+    $( "#draggable" ).offset({
+    left: 250,
+    top: 175
+    });
+  });
+</script>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h1 align="center">Calculator with Draggable on screen</h1>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="well">
+                            <div class="pull-left">
+                                <span>History</span> 
+                            </div>
+                            <div class="slideThree pull-left">  
+                                <input type="checkbox" value="None" id="slideThree" checked name="check" />
+                                <label for="slideThree"></label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <h4>Total Calculations <span id="totalHistory"></span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="row">
+        <div class="col-sm-9"> 
+            <div class="main"  id="draggable" align="center">
+                <table align="center" width="300" id="main">
+                    <tr>
+                        <td>
+                            <table class="screen" width="100%" align="center">
+                                <tr>
+                                    <td>
+                                        <input id="chasaweriveli" type="text" size="10" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="keypad" align="center">
+                                <tr>
+                                    <td>
+                                        <input type="button" value="C" onclick="c(&quot;&quot;)" class="btn btn-clear" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="BS" onclick="del()" class="btn btn-corner" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="+/-" onclick="neg()" class="btn btn-corner" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="%" onclick="v(&quot;%&quot;)" class="btn btn-corner" />
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="button" value="7" onclick="v(&quot;7&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="8" onclick="v(&quot;8&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="9" onclick="v(&quot;9&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="/" onclick="v(&quot;/&quot;)" class="btn btn-corner" />
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="button" value="4" onclick="v(&quot;4&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="5" onclick="v(&quot;5&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="6" onclick="v(&quot;6&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="x" onclick="v(&quot;*&quot;)" class="btn btn-corner" />
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="button" value="1" onclick="v(&quot;1&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="2" onclick="v(&quot;2&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="3" onclick="v(&quot;3&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="-" onclick="v(&quot;-&quot;)" class="btn btn-corner" />
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="button" value="0" onclick="v(&quot;0&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="." onclick="v(&quot;.&quot;)" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="=" onclick="e()" class="btn" />
+                                    </td>
+                                    <td>
+                                        <input type="button" value="+" onclick="v(&quot;+&quot;)" class="btn btn-corner" />
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <h3>History</h3>
+            <div id="history"></div>
+        </div>
+    </div>
+</div>
+<div id="prnt"></div>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="calculate.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+ul li {
+     display: inline-block;
+     list-style-type: none;
+ }
+ #header {
+    width:100%;
+    padding:20px 0px 10px 0px;
+    margin:0px;
+    min-height:70px;
+    background:lightgrey;
+ }
+#draggable {
+    width: 300px;
+}
+ table#main {
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+    background: #141414;
+    background: linear-gradient(#141414, #141414);
+    border-radius: 10px;
+    box-shadow: 0px 4px grey, 0px 10px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 99;
+ }
+ table.keypad {
+    margin-bottom: 20px;
+ }
+ table.keypad input {
+    margin: 3px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: #656e72;
+    border-radius: 3px;
+    box-shadow: 0px 4px grey;
+    margin: 0 7px 11px 0;
+    color: #fff;
+    font-size: 18px;
+    border-color:transparent;
+    line-height: 36px;
+    text-align: center;
+    -webkit-user-select: none;
+    transition: all 0.2s ease;
+ }
+ table.keypad input:hover, table.keypad input:focus {
+    background-color: #ababab;
+    border:transparent;
+    color: #fff;
+ }
+ table.keypad input.btn-clear:hover {
+    background: #f68991;
+    box-shadow: 0px 4px #d3545d;
+    color: white;
+}
+table.keypad input.btn-clear {
+    background: #ff9fa8;
+    box-shadow: 0px 4px #ff7c87;
+    color: white;
+}
+table.keypad input.btn-corner {
+    background: #ababab;
+    color: white;
+    border:transparent;
+}
+ table.screen {
+    margin-top: 10px;
+ }
+ table.screen input {
+    height: 50px;
+    width: 220px;
+    margin: 20px auto;
+    margin-right: 10px;
+    padding: 0 10px;
+    background: #d0cbac;
+    border-radius: 3px;
+    box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+    font-size: 17px;
+    line-height: 40px;
+    color: #141414;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    letter-spacing: 1px;
+ }
+ #sidebar {
+    background:lightgrey;
+    top:0px;
+    padding-top: 140px;
+    bottom:0px;
+    right:0px;
+    position:fixed;
+    z-index: -1;
+ }
+
+
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+
+
+/* SLIDE THREE */
+.slideThree {
+    width: 80px;
+    height: 26px;
+    background: #333;
+    margin: 0px;
+    margin-left: 30px;
+    margin-top: -2px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    position: relative;
+
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+
+.slideThree:after {
+    content: 'OFF';
+    font: 12px/26px Arial, sans-serif;
+    color: lightgrey;
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+}
+
+.slideThree:before {
+    content: 'ON';
+    font: 12px/26px Arial, sans-serif;
+    color: #00bf00;
+    position: absolute;
+    left: 10px;
+    z-index: 0;
+    font-weight: bold;
+}
+
+.slideThree label {
+    display: block;
+    width: 34px;
+    height: 20px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    transition: all .4s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 1;
+
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    background: #fcfff4;
+
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.slideThree input[type=checkbox]:checked + label {
+    left: 43px;
+}
